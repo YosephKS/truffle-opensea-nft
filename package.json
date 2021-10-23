@@ -18,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/YosephKS/truffle-nft-chainlink/issues"
   },
-  "homepage": "https://github.com/YosephKS/truffle-nft-chainlink#readme"
+  "homepage": "https://github.com/YosephKS/truffle-nft-chainlink#readme",
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.3.2",
+    "@openzeppelin/truffle-upgrades": "^1.10.0"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.5.1",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "truffle-plugin-verify": "^0.5.15"
+  }
 }
