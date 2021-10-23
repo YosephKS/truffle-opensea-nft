@@ -1,0 +1,6 @@
+build
+client
+node_modules
+yarn.lock
+.secret
+.env

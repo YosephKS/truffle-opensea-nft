@@ -1,0 +1,22 @@
+{
+  "name": "truffle-nft-chainlink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YosephKS/truffle-nft-chainlink.git"
+  },
+  "author": "YosephKS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YosephKS/truffle-nft-chainlink/issues"
+  },
+  "homepage": "https://github.com/YosephKS/truffle-nft-chainlink#readme"
+}
