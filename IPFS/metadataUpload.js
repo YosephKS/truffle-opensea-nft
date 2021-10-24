@@ -2,7 +2,6 @@ const fs = require('fs');
 const axios = require('axios');
 const imagesFolder = '../images/';
 const metadataFolder = '../metadata/';
-require('dotenv').config();
 
 try {
    let IPFSArray = [];
@@ -27,7 +26,7 @@ try {
             IPFSArray,
             {
                headers: {
-                  "X-API-KEY": process.env.MORALIS_REST_API_KEY,
+                  "X-API-KEY": "3mTCXBymxPXJtGU0Hxt18v3XlLgqqeM7xr4TyxHGBSFBlKbl1y8d5v0ltdNcGVxW",
                   "Content-Type": "application/json",
                   "accept": "application/json"
                }
