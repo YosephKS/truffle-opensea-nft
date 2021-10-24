@@ -13,13 +13,4 @@ contract('ERC721Custom', function () {
       expect((await this.erc721Custom.name())).to.equal(name);
       expect((await this.erc721Custom.symbol())).to.equal(symbol);
   });
-
-  it('Set the right token URI to the correct tokenId', async function () {
-    const user = await web3.eth.accounts()[0];
-    const tokenId = 0;
-    const tokenURI = 'https://ethereum.org';
-    await this.erc721Custom.safeMint(user, tokenId, tokenURI);
-    expect((await this.erc721Custom.ownerOf(tokenId))).to.equal(user)
-    expect((await this.erc721Custom.tokenURI(tokenId))).to.equal(tokenURI)
-  })
 });
