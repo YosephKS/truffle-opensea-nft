@@ -1,7 +1,7 @@
 const fs = require('fs');
 const axios = require('axios');
-const imagesFolder = '../images/';
-const metadataFolder = '../metadata/';
+const imagesFolder = './images/';
+const metadataFolder = './metadata/';
 require('dotenv').config();
 
 try {
@@ -9,7 +9,7 @@ try {
    let IPFSArray = [];
    let promises = [];
    fs.readdir(imagesFolder, (dirErr, files) => {
-      if (dirErr) throw rej();
+      if (dirErr) throw dirErr;
       files.forEach(file => {
          promises.push(new Promise((res, rej) => {
             fs.readFile(`${imagesFolder}${file}`, (fileErr, data) => {

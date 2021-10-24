@@ -1,6 +1,6 @@
 const fs = require('fs');
 const axios = require('axios');
-const metadataFolder = '../metadata/';
+const metadataFolder = './metadata/';
 const images = require('../metadata/images.json');
 require('dotenv').config();
 
