@@ -21,7 +21,8 @@
   "homepage": "https://github.com/YosephKS/truffle-nft-chainlink#readme",
   "dependencies": {
     "@openzeppelin/contracts-upgradeable": "^4.3.2",
-    "@openzeppelin/truffle-upgrades": "^1.10.0"
+    "@openzeppelin/truffle-upgrades": "^1.10.0",
+    "axios": "^0.23.0"
   },
   "devDependencies": {
     "@truffle/hdwallet-provider": "^1.5.1",

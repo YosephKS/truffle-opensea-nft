@@ -1,7 +1,5 @@
-
 const { expect } = require('chai');
 const { deployProxy } = require('@openzeppelin/truffle-upgrades');
- 
 const ERC721Custom = artifacts.require('ERC721Custom');
  
 contract('ERC721Custom (Proxy)', function () {

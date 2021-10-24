@@ -14,7 +14,11 @@ contract ERC721Custom is Initializable, ERC721Upgradeable, OwnableUpgradeable {
         __Ownable_init();
     }
 
-    function safeMint(address to, uint256 tokenId) public onlyOwner {
+    function safeMint(
+        address to,
+        uint256 tokenId,
+        string memory _tokenURI
+    ) public onlyOwner {
         _safeMint(to, tokenId);
     }
 }
