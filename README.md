@@ -4,9 +4,9 @@ Generate NFTs with Moralis, IPFS, and Chainlink to be listed in OpenSea
 
 ---
 
-### Pre-requisites
+## Pre-requisites
 
-1. Truffle
+### 1. Truffle
 
 ```bash
 # Using NPM
@@ -16,7 +16,7 @@ npm i -g truffle@latest
 yarn global add truffle@latest
 ```
 
-2. NPM or Yarn
+### 2. NPM or Yarn
 
 Go to [Node.js](https://nodejs.org/) website and download Node onto your system. If you would like to use **NPM** as your package manager, no more steps are required. If you would like to use Yarn, run the following command.
 
@@ -24,21 +24,21 @@ Go to [Node.js](https://nodejs.org/) website and download Node onto your system.
 npm i -g yarn@latest
 ```
 
-3. Moralis Free Account
+### 3. Moralis Free Account
 
 Go to [Moralis Admin](https://admin.moralis.io/register) to sign up for its free account and get your REST API Key.
 
 ---
 
-### Installation
+## Installation
 
-1. Clone the Project
+### 1. Clone the Project
 
 ```bash
 git clone https://github.com/YosephKS/truffle-nft-chainlink.git
 ```
 
-2. Install dependencies
+### 2. Install dependencies
 
 ```bash
 # Using NPM
@@ -50,9 +50,9 @@ yarn
 
 ---
 
-### Getting Started
+## Getting Started
 
-1. Run IPFS scripts
+### 1. Run IPFS scripts
 
 Truffle can't import `dotenv` into external scripts at the moment, so the environment variables have to be injected directly.
 
@@ -64,7 +64,7 @@ MORALIS_REST_API_KEY=xxx npm run ipfs
 MORALIS_REST_API_KEY=xxx yarn ipfs
 ```
 
-2. Compile the project
+### 2. Compile the project
 
 ```bash
 # Using NPM
@@ -74,7 +74,7 @@ npm run compile
 yarn compile
 ```
 
-3. Migrate the project to your preferred network
+### 3. Migrate the project to your preferred network
 
 ```bash
 yarn migrate --network rinkeby
@@ -82,4 +82,4 @@ yarn migrate --network rinkeby
 
 ---
 
-### License
+## License
