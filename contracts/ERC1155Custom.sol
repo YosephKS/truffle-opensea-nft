@@ -7,18 +7,17 @@ import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155BurnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-contract MoralisNFT is
+contract ERC1155Custom is
     Initializable,
     ERC1155Upgradeable,
     OwnableUpgradeable,
     PausableUpgradeable,
     ERC1155BurnableUpgradeable
 {
-    /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor() initializer {}
-
-    function initialize(string memory link) public initializer {
-        __ERC1155_init(link);
+    function initialize() public initializer {
+        __ERC1155_init(
+            "https://ipfs.moralis.io:2053/ipfs/QmaY2c4J46eB95zAbmadAwKKtGNpaywU9urQ8wUmz84br4/metadata/{id}.json"
+        );
         __Ownable_init();
         __Pausable_init();
         __ERC1155Burnable_init();

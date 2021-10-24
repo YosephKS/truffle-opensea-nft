@@ -11,7 +11,9 @@ try {
 
    images.forEach(({ path }, index) => {
       IPFSArray.push({
-         path: `metadata/${index},json`,
+         path: `metadata/${
+            ("0000000000000000000000000000000000000000000000000000000000000000" + index.toString(16)).substr("-64")
+         }.json`,
          content: {
             name: `Moralis Mage #${index}`,
             description: `This is Moralis Mage #${index}`,
@@ -34,29 +36,29 @@ try {
       });
    });
 
-      axios.post("https://deep-index.moralis.io/api/v2/ipfs/uploadFolder",
-         IPFSArray,
-         {
-            headers: {
-               "X-API-KEY": process.env.MORALIS_REST_API_KEY,
-               "Content-Type": "application/json",
-               "accept": "application/json"
-            }
+   axios.post("https://deep-index.moralis.io/api/v2/ipfs/uploadFolder",
+      IPFSArray,
+      {
+         headers: {
+            "X-API-KEY": process.env.MORALIS_REST_API_KEY,
+            "Content-Type": "application/json",
+            "accept": "application/json"
          }
-      ).then((res) => {
-         const { data } = res || {};
-         fs.writeFile(
-            `${metadataFolder}metadata.json`,
-            JSON.stringify(data),
-            "utf8",
-            (err) => {
-               if(err) console.log(err);
-               console.log("The file was saved!");
-            }
-         );                 
-      }).catch((e) => {
-         console.log(e);
-      });
+      }
+   ).then((res) => {
+      const { data } = res || {};
+      fs.writeFile(
+         `${metadataFolder}metadata.json`,
+         JSON.stringify(data),
+         "utf8",
+         (err) => {
+            if(err) console.log(err);
+            console.log("The file was saved!");
+         }
+      );                 
+   }).catch((e) => {
+      console.log(e);
+   });
 } catch(e) {
    console.error(e);
 }
