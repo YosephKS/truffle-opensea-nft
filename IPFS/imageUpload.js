@@ -4,9 +4,8 @@ const imagesFolder = '../images/';
 const metadataFolder = '../metadata/';
 require('dotenv').config();
 
-console.log(process.ENV);
-
 try {
+   if (!process.env.MORALIS_REST_API_KEY) throw new Error('No API Key found!');
    let IPFSArray = [];
    let promises = [];
    fs.readdir(imagesFolder, (dirErr, files) => {
