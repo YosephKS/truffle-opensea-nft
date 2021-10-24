@@ -4,6 +4,8 @@ const imagesFolder = '../images/';
 const metadataFolder = '../metadata/';
 require('dotenv').config();
 
+console.log(process.ENV);
+
 try {
    let IPFSArray = [];
    let promises = [];
