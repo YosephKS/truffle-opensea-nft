@@ -1,6 +1,6 @@
-# Truffle NFT Chainlink
+# Truffle OpenSea NFT
 
-Generate NFTs with Moralis, IPFS, and Chainlink to be listed in OpenSea
+Generate NFTs with Moralis, Openzeppelin, and Chainlink to be listed in OpenSea
 
 ---
 
@@ -52,7 +52,23 @@ yarn
 
 ## Getting Started
 
-### 1. Run IPFS scripts
+### 1. Add your wallet mnemonic
+
+Create a `.secret` file and copy your mnemonic into the file.
+
+### 2. Fill in environment variables
+
+Copy `.env.example` and rename it to `.env` and fill in all the environment variables.
+
+```
+INFURA_API_KEY=xxx
+MORALIS_API_KEY=xxx
+ETHERSCAN_API_KEY=xxx
+NODE_PROVIDER=xxx
+MORALIS_REST_API_KEY=xxx
+```
+
+### 3. Run IPFS scripts
 
 Truffle can't import `dotenv` into external scripts at the moment, so the environment variables have to be injected directly.
 
@@ -64,7 +80,7 @@ MORALIS_REST_API_KEY=xxx npm run ipfs
 MORALIS_REST_API_KEY=xxx yarn ipfs
 ```
 
-### 2. Compile the project
+### 4. Compile the project
 
 ```bash
 # Using NPM
@@ -74,7 +90,7 @@ npm run compile
 yarn compile
 ```
 
-### 3. Migrate the project to your preferred network
+### 5. Migrate the project to your preferred network
 
 ```bash
 yarn migrate --network rinkeby
@@ -83,3 +99,5 @@ yarn migrate --network rinkeby
 ---
 
 ## License
+
+[MIT](https://github.com/YosephKS/truffle-opensea-nft/blob/master/LICENSE)
