@@ -1,6 +1,6 @@
 # Truffle OpenSea NFT
 
-Generate NFTs with Moralis, Openzeppelin, and Chainlink to be listed in OpenSea
+Generate NFTs with Truffle, Moralis, and Openzeppelin to be listed in OpenSea
 
 ---
 
