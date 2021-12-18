@@ -12,7 +12,9 @@
     "console": "truffle console",
     "develop": "truffle develop",
     "test": "truffle test",
-    "ipfs": "node ./IPFS/imageUpload.js && node ./IPFS/metadataUpload.js"
+    "mint": "truffle exec ./scripts/MintNFTs.js",
+    "verify": "truffle run verify ERC721Basic ERC1155Basic",
+    "ipfs": "node ./IPFS/index.js"
   },
   "repository": {
     "type": "git",

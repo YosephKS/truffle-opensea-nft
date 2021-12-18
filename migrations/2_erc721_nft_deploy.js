@@ -1,8 +1,5 @@
-const { deployProxy } = require("@openzeppelin/truffle-upgrades");
-const ERC721Custom = artifacts.require("ERC721Custom");
+const ERC721Basic = artifacts.require("ERC721Basic");
 
 module.exports = async function (deployer) {
-  deployProxy(ERC721Custom, ["Example NFT", "EXMP"], {
-    deployer,
-  });
+  deployer.deploy(ERC721Basic, "Example NFT", "EXMP");
 };
