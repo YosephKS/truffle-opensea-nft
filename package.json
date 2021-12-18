@@ -1,5 +1,5 @@
 {
-  "name": "truffle-nft-chainlink",
+  "name": "truffle-opensea-nft",
   "version": "1.0.0",
   "description": "",
   "main": "truffle-config.js",
@@ -9,6 +9,7 @@
   "scripts": {
     "compile": "truffle compile",
     "migrate": "truffle migrate",
+    "console": "truffle console",
     "test": "truffle test",
     "ipfs": "node ./IPFS/imageUpload.js && node ./IPFS/metadataUpload.js"
   },
@@ -32,6 +33,6 @@
     "@truffle/hdwallet-provider": "^1.5.1",
     "chai": "^4.3.4",
     "dotenv": "^10.0.0",
-    "truffle-plugin-verify": "^0.5.15"
+    "truffle-plugin-verify": "^0.5.20"
   }
 }
