@@ -10,6 +10,7 @@
     "compile": "truffle compile",
     "migrate": "truffle migrate",
     "console": "truffle console",
+    "develop": "truffle develop",
     "test": "truffle test",
     "ipfs": "node ./IPFS/imageUpload.js && node ./IPFS/metadataUpload.js"
   },
